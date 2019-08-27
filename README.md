@@ -8,4 +8,5 @@ For the front end: HTML, CSS, Bootstrap, FontAwesome, Javascript, JQuery.
 #### Info?
 *If interested in running this app and have any questions: dogrock2lnx@gmail.com*
 You will need a gmail account, a twilio account, your email password will need to go in an environment variable.
-For hardware you will need a camera and a specific type of RFID card reader with some key fobs.
+For hardware you will need a camera and a specific type of RFID card reader with some key fobs. A simple UI will make 
+setup easy. Default password is password. Enjoy!
