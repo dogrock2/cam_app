@@ -1,0 +1,177 @@
+<div class="modal fade" id="settingsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="row p-2">
+                <div class="col-4">
+                    <h5 class="modal-title pl-2">Manage Settings</h5>
+                </div>
+                <div class="col-7 pt-2">
+                    <div class="text-center">
+                        <h6 id="modalSettingsMsg" class="font-italic"></h6>
+                        <!--Any message to display on top of modal-->
+                    </div>
+                </div>
+                <div class="col-1">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body border">
+                <div id="accordion">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <div class="text-left">
+                                <h5 class="mb-0">
+                                    <small><span id="picSettingsIcon" class="pt-3">
+                                        <i class="fas fa-plus"></i>
+                                    </span></small>
+                                    <button class="btn btn-link" id="picSettingsLink" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span>Picture Settings</span>
+                                    </button>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="camChk">
+                                        <label class="form-check-label font-italic" for="camChk">
+                                            Enable Pictures
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label for="inputPicRes">Picture Resolution</label>
+                                        <input type="text" class="form-control" id="inputPicRes" placeholder="Enter Size" disabled>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPicTime">Picture Days to Store ( feature N/A )</label>
+                                        <input type="text" class="form-control" id="inputPicTime" placeholder="Enter days" disabled>
+                                    </div>
+                                    <button class="btn btn-success" id="btnSavePic" type="button">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0"><small>
+                                <span id="videoSettingsIcon" class="pt-3">
+                                    <i class="fas fa-plus" aria-hidden="true"></i>
+                                </span></small>
+                                <button class="btn btn-link collapsed" id="videoSettingsLink" data-toggle="collapse"
+                                    data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Video Settings
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="vidChk">
+                                        <label class="form-check-label font-italic" for="vidChk">
+                                            Enable Videos
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group">
+                                        <label for="inputVidRes">Video Frames</label>
+                                        <input type="text" class="form-control" id="inputVidRes" placeholder="Enter Frames">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputVidLength">Video Length</label>
+                                        <input type="text" class="form-control" id="inputVidLength" placeholder="Enter seconds">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputVidTime">Video Days to Store ( feature N/A )</label>
+                                        <input type="text" class="form-control" id="inputVidTime" placeholder="Enter days" disabled>
+                                    </div>
+                                    <button class="btn btn-success" id="btnSaveVid" type="button">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0"><small>
+                                <span id="pwdMngIcon" class="pt-3">
+                                    <i class="fas fa-plus" aria-hidden="true"></i>
+                                </span></small>
+                                <button class="btn btn-link collapsed" id="pwdMngLink" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Password Management
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="text-center mb-2">Change Password</div>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="txtOriginalPwd" placeholder="Original Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="txtNewPwd" placeholder="New Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="txtConfirmPwd" placeholder="Confirm Password">
+                                    </div>
+                                    <button class="btn btn-primary" id="btnSavePwd" type="button">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0"><small>
+                                <span id="adminProfileIcon" class="pt-3">
+                                    <i class="fas fa-plus" aria-hidden="true"></i>
+                                </span></small>
+                                <button class="btn btn-link collapsed" id="adminProfileLink" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Admin Profile
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="inputAdminEmail">Current Admin Email</label>
+                                        <input type="Text" class="form-control" id="inputAdminEmail" placeholder="Admin Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAdminPhone">Current Admin Phone</label>
+                                        <input type="text" class="form-control" id="inputAdminPhone" placeholder="Admin Phone">
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="inputAdminRFID">RFID Path</label>
+                                        <input type="text" class="form-control" id="inputAdminRFID" placeholder="RFID Path">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAdminAPIKey">Twilio sid</label>
+                                        <input type="text" class="form-control" id="inputAdminAPIKey" placeholder="Account sid">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputTokenAPIKey">Twilio Token</label>
+                                        <input type="text" class="form-control" id="inputTokenAPIKey" placeholder="Account Token">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputTwilioPhone">Twilio Phone#</label>
+                                        <input type="text" class="form-control" id="inputTwilioPhone" placeholder="Account Phone">
+                                    </div>
+                                    <button class="btn btn-primary" id="btnSaveProfile" type="button">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+{%extends "main.html"%}
+{%block content%}
+<h1 class="text-center"><i class="fas fa-users"></i> Profiles</h1>
+<hr>
+<form id="profileFrm">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="FOB ID" id="txtFobId" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First Name" id="txtFname" required>
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Last Name" id="txtLname" required>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" id="btnProfileAddUpdate">ADD/UPDATE</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <input type="email" class="form-control" placeholder="EMAIL" id="txtEmail">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Phone Number" id="txtPhone">
+        </div>
+        <div class="col form-group">
+            <select id="inputState" class="form-control">
+                <option selected>Choose...</option>
+                <option>SMS</option>
+                <option>EMail</option>
+                <option>EMail/SMS</option>
+                <!--<option>WhatsApp</option>-->
+                <!--<option>EMail/WhatsApp</option>-->
+                <!--<option>ALL</option>-->
+            </select>
+        </div>
+        <div class="col">
+            <button class="btn btn-danger" id="btnProfileClr" type="reset">CLEAR FORM</button>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center">
+            <span class="font-italic text-danger font-weight-bold" id="profilesErrMsg">&nbsp;</span>
+        </div>
+    </div>
+</form>
+<hr>
+<div id="profilesDiv">
+    <table class="table table-striped bg-white">
+        <thead>
+          <tr>
+            <th scope="col">FOB</th>
+            <th scope="col">Last</th>
+            <th scope="col">First</th>
+            <th scope="col">Phone</th>
+            <th scope="col">eMail</th>
+            <th scope="col">Comms</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in profiles %}
+            <tr>
+              <th scope="row"><small>{{x.fob_id}}</small></th>
+              <td><small>{{x.lname}}</small></td>
+              <td><small>{{x.fname}}</small></td>
+              <td><small>{{x.phone}}</small></td>
+              <td><small>{{x.email}}</small></td>
+              <td><small>{{x.comms}}</small></td>
+              <td><button class="btn btn-link updateLink" idRefUpdate='{{x.id}}'><small><i class="fas fa-pen"></i> Update</small></button> | <button class="btn btn-link deleteLink" idRefDel='{{x.id}}'><small class=" text-danger"><i class="fas fa-times"></i> Del</small></button></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{%endblock content%}

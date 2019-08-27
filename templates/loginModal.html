@@ -1,0 +1,39 @@
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="row p-2">
+                <div class="col-4">
+                    <h5 class="modal-title pl-2">Enter Password</h5>
+                </div>
+                <div class="col-7 pt-2">
+                    <div class="text-center">
+                        <h6 id="loginModalMsg" class="font-italic"></h6>
+                        <!--Any message to display on top of modal-->
+                    </div>
+                </div>
+                <div class="col-1">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body border">
+                <form id="loginFrm">
+                    <div class="form-group row">
+                        <label for="userNamelbl" class="col-sm-2 col-form-label">Username</label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control-plaintext" id="userNamelbl" value="Admin">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                        </div>
+                    </div>
+                    <button class="btn btn-success" id="pwdBtnSubmit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

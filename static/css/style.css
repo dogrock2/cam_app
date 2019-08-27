@@ -1,0 +1,18 @@
+#btm_radios {
+   margin-bottom: 100px;
+}
+
+body {
+  background: url(../img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#profilesDiv {
+
+    overflow-y:auto;
+    max-height: 60vh;
+
+}

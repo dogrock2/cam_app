@@ -1,0 +1,30 @@
+<div class="modal" tabindex="-1" role="dialog" id="pwdModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="userNameTxtModal">User Name</label>
+                        <input type="text" class="form-control" id="userNameTxtModal" aria-describedby="emailHelp" placeholder="Admin" disabled>
+                      </div>
+                      <div class="form-group">
+                        <label for="loginPwd">Password</label>
+                        <input type="password" class="form-control" id="loginPwd" placeholder="Password">
+                        <div class="text-right"><small><a href="#">Forgot Password</a></small></div>
+                      </div>
+                      <div class="text-center" id="pwdModalErr"><small>&nbsp;</small></div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Log in</button>              
+            </div>            
+        </div>
+    </div>
+</div>

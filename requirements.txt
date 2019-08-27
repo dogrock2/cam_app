@@ -1,0 +1,5 @@
+flask_sqlalchemy
+flask_migrate
+flask_bcrypt
+opencv-python
+twilio

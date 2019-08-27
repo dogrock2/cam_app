@@ -1,0 +1,50 @@
+{%extends "main.html"%}
+{%block content%}
+<div class="row mt-5">
+    <div class="col-md"></div>
+    <div class="col-md text-center" id="imgHold">
+        <img src="{{ url_for('video_feed') }}" id="videoImgSrc">
+    </div>
+    <div class="col-md"></div>
+</div>
+<div class="row mt-3">
+    <div class="col-md"></div>
+    <div class="col-md">
+        <div class="row">
+            <div class="col text-right">
+                <form>
+                    <button class="btn btn-success" type="button" id="btnStart">Start</button>
+                </form>
+            </div>
+            <div class="col">
+                <form>
+                    <button class="btn btn-danger" type="button" id="btnStop">Stop</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md"></div>
+</div>
+<div class="row my-3">
+    <div class="col-md"></div>
+    <div class="col-md text-center">
+        <span id='msg_index' class='font-italic small'>Welcome!</span>
+    </div>
+    <div class="col-md"></div>
+</div>
+<div class="row" id="btm_radios">
+    <div class="col-md"></div>
+    <div class="col-md text-center">
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" aVal="1" id="optradio1" checked><span
+                    class="ml-1 mr-2">Pictures</span>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="optradio" aVal="2" id="optradio2"><span class="mx-1">Videos</span>
+            </label>
+        </form>
+    </div>
+    <div class="col-md"></div>
+</div>
+{%endblock content%}
